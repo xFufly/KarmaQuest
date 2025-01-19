@@ -1,0 +1,178 @@
+@import url('./comfortaa.css');
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #EDF6E5;
+    color: black;
+    font-size: 12px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width: 100%;
+
+    font-family: "Comfortaa", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body > h1, section {
+    margin-top: auto;
+}
+
+#profileBtn {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+#profileBtn img {
+    margin: 0;
+    width: 50px;
+}
+
+#sweetCard {
+    width: 90%;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+}
+
+#sweetCard h1 {
+    font-size: 24px;
+    font-weight: normal;
+    overflow: visible;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#sweetCard p {
+    margin-top: auto;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#sweetCard hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;               
+    background-color: black;
+    height: 1px;
+}
+
+#sweetCard #sweetBtns {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+#sweetCard #sweetBtns button {
+    color: #ffffff;
+    width: 50%;
+    height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-width: 1px;
+    font-weight: 500;
+}
+
+#acceptBtn {
+    background-color: #B5EAEA;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+    transform: translateX(25%);
+    text-align: left;
+    padding-left: 12.5%;
+}
+
+#denyBtn {
+    background-color: #FEBCBD;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    transform: translateX(-25%);
+    text-align: right;
+    padding-right: 12.5%;
+}
+
+#navBtns {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#navBtns button {
+    width: 40%;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #E6A0A0;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-width: 1px;
+    font-weight: 500;
+}
+
+#sweetCounter {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px black;
+    background-color: white;
+    text-align: center;
+}
+
+#sweetCounter img {
+    width: 150px;
+    font-size: 16px;
+    margin: 0;
+}
+
+#sweetCounter p {
+    margin: 5px;
+    margin-top: 0;
+}
+
+footer {
+    margin-top: auto;
+}

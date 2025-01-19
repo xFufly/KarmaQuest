@@ -1,0 +1,27 @@
+{
+  "name": "fr.xfufly.karmaquest",
+  "displayName": "KarmaQuest",
+  "version": "1.0.0",
+  "description": "An app that is going to enhance people's kindness.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-browser": "^7.0.0",
+    "cordova-electron": "^4.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser",
+      "electron"
+    ]
+  }
+}
