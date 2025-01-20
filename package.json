@@ -15,13 +15,19 @@
   "devDependencies": {
     "cordova-android": "^13.0.0",
     "cordova-browser": "^7.0.0",
-    "cordova-electron": "^4.0.0"
+    "cordova-electron": "^4.0.0",
+    "cordova-plugin-camera": "^8.0.0"
   },
   "cordova": {
     "platforms": [
       "android",
       "browser",
       "electron"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      }
+    }
   }
 }

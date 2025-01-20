@@ -28,11 +28,11 @@ body {
     font-style: normal;
 }
 
-body > h1, section {
+body > h1, body > section, body > form {
     margin-top: auto;
 }
 
-#profileBtn {
+.topRightBtn {
     background-color: white;
     border: 1px solid black;
     padding: 0;
@@ -45,21 +45,29 @@ body > h1, section {
     text-decoration: none;
 }
 
-#profileBtn img {
+.topRightBtn img {
     margin: 0;
     width: 50px;
 }
 
-#sweetCard {
+#sweetCard, #littleSweetCard, #formPhotoProof {
     width: 90%;
-    height: 225px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: white;
     color: black;
     box-shadow: 0 0 5px black;
     border-radius: 10px;
+}
+
+#sweetCard {
+    height: 225px;
+}
+
+#littleSweetCard {
+    height: 100px;
 }
 
 #sweetCard h1 {
@@ -72,13 +80,16 @@ body > h1, section {
     padding: 0;
 }
 
-#sweetCard p {
-    margin-top: auto;
-    margin-bottom: 5px;
+#sweetCard p, #littleSweetCard p {
     font-size: 16px;
 }
 
-#sweetCard hr {
+#sweetCard p {
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+#sweetCard hr, #formPhotoProof hr {
     border: 0;
     clear: both;
     display: block;
@@ -119,6 +130,40 @@ body > h1, section {
     padding-left: 12.5%;
 }
 
+#acceptBtn.accepted {
+    animation: acceptBtnAccepted 2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 0;
+    text-align: center;
+    transform: translateX(50%);
+    text-indent: -9999px;
+    line-height: 0;
+}
+
+#acceptBtn.accepted:after {
+    content: 'Prove it !';
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+}
+
+@keyframes acceptBtnAccepted {
+    from {
+        clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        transform: translateX(25%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transform: translateX(50%);
+    }
+}
+
 #denyBtn {
     background-color: #FEBCBD;
     border-top-right-radius: 5px;
@@ -127,6 +172,22 @@ body > h1, section {
     transform: translateX(-25%);
     text-align: right;
     padding-right: 12.5%;
+}
+
+#denyBtn.accepted {
+    animation: denyBtnBtnAccepted 2s;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+@keyframes denyBtnBtnAccepted {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+        transform: translateX(-25%);
+    }
+    to {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transform: translateX(-50%);
+    }
 }
 
 #navBtns {
@@ -138,7 +199,7 @@ body > h1, section {
     width: 100%;
 }
 
-#navBtns button {
+#navBtns button, #formPhotoProof button, body > #sendBtn {
     width: 40%;
     padding: 15px;
     margin: 5px;
@@ -171,6 +232,24 @@ body > h1, section {
 #sweetCounter p {
     margin: 5px;
     margin-top: 0;
+}
+
+#formPhotoProof {
+    min-height: 200px;
+}
+
+#formPhotoProof #photoProof {
+    width: 200px;
+    border-radius: 5px;
+}
+
+#formPhotoProof #cameraTakeProofPhoto, #formPhotoProof #photoProof {
+    margin: 10px 0;
+}
+
+body > #sendBtn {
+    background-color: #FEBCBD;
+    margin: auto 10px 0;
 }
 
 footer {

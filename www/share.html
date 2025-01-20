@@ -19,33 +19,24 @@
         <title>KarmaQuest</title>
     </head>
     <body>
-        <a href="#" class="topRightBtn" id="profileBtn"><img src="./img/icon/profile.svg"></a>
-
+        <a href="index.html" class="topRightBtn" id="homeBtn"><img src="./img/icon/home.svg"></a>
         <h1 id="title">KarmaQuest</h1>
 
-        <section id="sweetCard">
-            <h1 id="sweetActionTitle">Sweet Action</h1>
-            <hr>
+        <section id="littleSweetCard">
             <p id="sweetAction">Sweet action here</p>
-            <article id="sweetBtns">
-                <button id="acceptBtn">I'll do it</button>
-                <button id="denyBtn">I'll pass</button>
-            </article>
         </section>
 
-        <form id="navBtns">
-            <button id="worldBtn">World's actions</button>
-            <button id="shareButton" formaction="share.html">Share your action</button>
-        </form>
-
-        <section id="sweetCounter">
-            <img src="./img/icon/trophy.svg">
-            <p id="counterTitle">Sweet streak</p>
-            <p id="counterText">2</p>
+        <section id="formPhotoProof">
+            <h1>Share your action</h1>
+            <hr>
+            <button id="cameraTakeProofPhoto">Take a picture</button>
+            <img id="photoProof">
         </section>
+
+        <button id="sendBtn" disabled>Send</button>
 
         <footer>&copy; DIDELOT Tim - 2025</footer>
         <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/photoProof.js"></script>
     </body>
 </html>
