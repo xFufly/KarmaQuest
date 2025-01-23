@@ -164,6 +164,25 @@ body > h1, body > section, body > form {
     }
 }
 
+#acceptBtn.refused {
+    animation: acceptBtnRefused 2s;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    padding-left: 0;
+    text-align: center;
+    transform: translateX(50%);
+}
+
+@keyframes acceptBtnRefused {
+    from {
+        clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+        transform: translateX(25%);
+    }
+    to {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        transform: translateX(50%);
+    }
+}
+
 #denyBtn {
     background-color: #FEBCBD;
     border-top-right-radius: 5px;
@@ -186,6 +205,40 @@ body > h1, body > section, body > form {
     }
     to {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transform: translateX(-50%);
+    }
+}
+
+#denyBtn.refused {
+    animation: denyBtnBtnRefused 2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-right: 0;
+    text-align: center;
+    transform: translateX(-50%);
+    text-indent: -9999px;
+    line-height: 0;
+}
+
+#denyBtn.refused:after {
+    content: ':(';
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+}
+
+@keyframes denyBtnBtnRefused {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        transform: translateX(-25%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         transform: translateX(-50%);
     }
 }

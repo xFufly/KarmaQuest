@@ -22,10 +22,14 @@ document.getElementById("acceptBtn").addEventListener("click", acceptChallenge);
 document.getElementById("denyBtn").addEventListener("click", refuseChallenge);
 
 function acceptChallenge() {
-    var acceptBtn = document.getElementById("acceptBtn");
-    var denyBtn = document.getElementById("denyBtn");
-    acceptBtn.classList.add("accepted");
-    denyBtn.classList.add("accepted");
+    if (Object.hasOwn(acceptBtn, 'classList')) {
+        document.location.href = "/share.html" ? acceptBtn.classList.contains("accepted") : "/index.html";
+    } else {
+        var acceptBtn = document.getElementById("acceptBtn");
+        var denyBtn = document.getElementById("denyBtn");
+        acceptBtn.classList.add("accepted");
+        denyBtn.classList.add("accepted");
+    }
 }
 
 function refuseChallenge() {
